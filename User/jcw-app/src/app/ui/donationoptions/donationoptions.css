@@ -1,0 +1,195 @@
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.donation-options {
+  flex: 1;
+  padding: 4rem 1.25rem;
+  margin-top: 6rem;
+}
+
+.donations-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.donation-card {
+  position: relative;
+  background: #1c4388;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.donation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.donation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.donation-card:focus-visible {
+  outline: 2px solid #22c55e;
+  outline-offset: 2px;
+}
+
+.donation-card:hover::before {
+  opacity: 1;
+}
+
+.donation-card:active {
+  transform: translateY(-2px);
+  transition: transform 0.1s ease;
+}
+
+.donation-image {
+  width: 180px;
+  height: 180px;
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.donation-card:hover .donation-image {
+  transform: scale(1.05);
+}
+
+.monetary { background-image: url(https://as1.ftcdn.net/v2/jpg/04/81/24/50/1000_F_481245047_hh5OOLGqNkHTnOfDcW9k9Q8YPZe4RDHX.jpg); }
+.service { background-image: url(https://images.squarespace-cdn.com/content/v1/536fe0f6e4b08758c320b79a/1639512806072-RIVUV6RF0MU9SSE797D1/Home+page+icons+%282%29.jpg); }
+.goods { background-image: url(https://img.freepik.com/free-vector/tiny-people-standing-near-box-donation-food-delivery-volunteers-giving-healthy-grocery-goods-charity-flat-vector-illustration-social-support-humanitarian-help-community-sharing-concept_74855-21023.jpg); }
+
+.donation-content {
+  text-align: center;
+  flex: 1;
+  pointer-events: none;
+}
+
+.donation-content h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #22c55e 0%, #16a34a 100%);
+  margin: 1rem auto;
+  border-radius: 3px;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+blockquote p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+blockquote footer {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.donation-button {
+  background: linear-gradient(90deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  border-radius: 2rem;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  width: auto;
+  min-width: 160px;
+  text-align: center;
+  pointer-events: none;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.donation-card:hover .donation-button {
+  transform: scale(1.05);
+}
+
+.donation-card:active .donation-button {
+  transform: scale(0.98);
+}
+
+.other-donations {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.text-button {
+  background: none;
+  border: none;
+  color: #1a365d;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s ease;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.text-button:hover {
+  color: #22c55e;
+}
+
+@media (max-width: 768px) {
+  .donation-options {
+    padding: 3rem 1rem;
+  }
+
+  .donations-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .donation-card {
+    padding: 1.5rem;
+  }
+
+  .donation-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .donation-content h2 {
+    font-size: 1.5rem;
+  }
+}

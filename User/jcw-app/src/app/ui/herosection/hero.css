@@ -1,0 +1,120 @@
+/* Hero.css */
+:root {
+  --color-primary: #49b93f;
+  --color-primary-dark: #3a9432;
+  --color-secondary: #18df18;
+  --color-white: #ffffff;
+  --color-overlay: rgba(30, 85, 238, 0.15);
+  --transition-speed: 0.3s;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #1a1a1a; /* Fallback before image loads */
+  opacity: 0;
+  transition: opacity var(--transition-speed) ease;
+}
+
+.hero--loaded {
+  opacity: 1;
+  background-image: url("https://jhbchildwelfare.org.za/wp-content/uploads/2024/02/JCW-Home-Page-Hero-Image-Background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-overlay);
+  box-shadow: 
+    inset 120px 100px 250px rgba(0, 0, 0, 0.6),
+    inset -120px -100px 250px rgba(0, 0, 0, 0.6);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.hero__title {
+  color: var(--color-white);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero__subtitle {
+  color: var(--color-white);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  max-width: 600px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.hero__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hero__button:hover {
+  background-color: #1c4388;
+  transform: translateY(-2px);
+}
+
+.hero__button:active {
+  transform: translateY(0);
+}
+
+.hero__button-icon {
+  transition: transform var(--transition-speed) ease;
+}
+
+.hero__button:hover .hero__button-icon {
+  transform: translateX(4px);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .hero::after {
+    box-shadow: 
+      inset 75px 50px 100px rgba(0, 0, 0, 0.7),
+      inset -75px -50px 100px rgba(0, 0, 0, 0.7);
+  }
+
+  .hero__content {
+    padding: 1rem;
+  }
+
+  .hero__button {
+    padding: 0.875rem 1.75rem;
+    font-size: 1.125rem;
+  }
+}

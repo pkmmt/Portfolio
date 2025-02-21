@@ -1,0 +1,29 @@
+:root{
+    --bg: white;
+    --bg2: #1c68b9;
+    --bg3: #d2e01b;
+    --bg4: #cc0109;
+    --bg5: #004496;
+    --text: white;
+    --text2: #004496;
+    --text3: #1c68b9;
+    --text4: grey;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Luckiest Guy', cursive;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}

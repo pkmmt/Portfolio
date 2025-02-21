@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: whitesmoke;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .container:hover {
+    background-color: #0BFF06;
+    border-radius: 10px;
+    transform: scale(1);
+    font-size: medium;
+  }
+  
+  .activeLink {
+    background-color: #0BFF06;
+    width:260px;
+    color: #fff;
+    border-radius: 10px;
+  }
+
+  .icon {
+    margin-right: 10px;
+    gap: 10px;
+  }
+
+  .title {
+    margin-left: 5px;
+  }

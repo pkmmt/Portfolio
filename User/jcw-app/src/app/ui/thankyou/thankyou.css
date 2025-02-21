@@ -1,0 +1,202 @@
+:root {
+    --primary-color: #49b93f;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .text{
+    margin: 0.5rem 0;
+  }
+  
+  img {
+    width: 100%;
+  }
+  .Hero-title{
+    color: white;
+  }
+  
+  /* Showcase Styling */
+  
+  .showcase {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url("https://jhbchildwelfare.org.za/wp-content/uploads/2024/03/Website-Hero-Image_Get-in-Touch.jpg")
+      no-repeat center center/cover;
+  }
+  
+  /* Showcase Overlay */
+  
+  .showcase::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(30, 85, 238, 0.247);
+    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+  }
+  
+  .showcase-top {
+    position: relative;
+    height: 90px;
+    z-index: 2;
+  }
+  
+  .showcase-top .logo-text {
+    color: var(--primary-color);
+    font-family: "Roboto", sans-serif;
+    --webkit-font-smoothing: antialiased;
+    font-size: 38px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .showcase-top a {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+  .showcase-content {
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 9rem;
+    z-index: 2;
+  }
+  
+  .showcase-content h1 {
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.1rem;
+    margin: 0 0 2rem;
+  }
+  
+  .showcase-content p {
+    font-weight: 400;
+    color: #fff;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    line-height: 1.25rem;
+    margin: 2rem 0 2rem 0;
+  }
+  
+  .showcase-content .btn-xl {
+    margin-top: 3rem;
+  }
+  
+  /* Button Styling */
+  
+  .Hero-btn {
+    background-color: #004496; 
+    width: 150px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+  
+  .Hero-btn-rounded {
+    border-radius: 5px;
+  }
+  
+  
+  /* Media Queries */
+  
+  @media (max-width: 960px) {
+    .showcase {
+      height: 100vh;
+    }
+  
+    .showcase-top .logo-text {
+      color: var(--primary-color);
+      font-family: "Roboto", sans-serif;
+      --webkit-font-smoothing: antialiased;
+      font-size: 38px;
+      position: absolute;
+      top: 30%;
+      left: 5%;
+      transform: translate(0);
+    }
+  
+    .showcase-content h1 {
+      font-weight: 700;
+      font-size: 3.7rem;
+      line-height: 1rem;
+      margin: 0 0 2rem;
+    }
+  
+    .showcase-content p {
+      font-weight: 400;
+      color: #fff;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      line-height: 1rem;
+      margin: 0 0 2rem;
+    }
+  
+    .Hero-btn-xl {
+      font-size: 1.5rem;
+      padding: 1.2rem 1.8rem;
+      text-transform: uppercase;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .showcase::after {
+      box-shadow: inset 75px 50px 100px #000000, inset -75px -50px 100px #000000;
+    }
+  
+    .showcase {
+      height: 100vh;
+    }
+  
+    .showcase-top .logo-text {
+      font-size: 1.5rem;
+      top: 30%;
+      left: 15%;
+      transform: translate(0);
+    }
+  
+    .showcase-content h1 {
+      font-size: 1.8rem;
+      line-height: 1rem;
+    }
+  
+    .showcase-content p {
+      font-size: 1.2rem;
+    }
+  
+    .Hero-btn {
+      margin-right: 0.1rem;
+    }
+  
+    .Hero-btn-xl {
+      font-size: 1.2rem;
+      padding: 1rem 1.2rem;
+      text-transform: uppercase;
+    }
+  }
+  

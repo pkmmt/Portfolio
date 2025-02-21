@@ -1,0 +1,153 @@
+/* Tabs CSS */
+.pay-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 200px;
+}
+
+.bloc-tabs {
+  display: flex;
+}
+
+.tabs {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  background: rgba(128, 128, 128, 0.075);
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.tabs:first-child {
+  border-top-left-radius: 10px;
+}
+
+.tabs:last-child {
+  border-top-right-radius: 10px;
+}
+
+.active-tabs {
+  background: white;
+  border-bottom: 3px solid rgb(88, 147, 241);
+}
+
+.content-tabs {
+  flex-grow: 1;
+}
+
+.content {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.active-content {
+  display: block;
+}
+
+/* Payment form CSS */
+.mainscreen {
+  width: 100%;
+}
+
+.card-pay {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.rightside {
+  width: 100%;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.inputbox {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.inputbox:focus {
+  outline: none;
+  border-color: rgb(88, 147, 241);
+}
+
+.expcvv {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  background: #004496;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background: #003377;
+  transform: translateY(-2px);
+}
+
+/* Other styling */
+.other {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.QR-code, .EFT, .Mycard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .pay-container {
+    width: 95%;
+  }
+
+  .expcvv {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    font-size: 0.9rem;
+  }
+
+  .card-pay {
+    padding: 1rem;
+  }
+
+  .button {
+    font-size: 1rem;
+  }
+}

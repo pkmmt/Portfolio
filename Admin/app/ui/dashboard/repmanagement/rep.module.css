@@ -1,0 +1,167 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.header h1 {
+  color: #004496;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.statsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.statCard {
+  background:#004496;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+}
+
+.statLabel {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.mainContent {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.listSection {
+  margin-bottom: 2rem;
+}
+
+.listSection h2 {
+  color: #1a365d;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.employeeTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: white;
+  color: black;
+}
+
+.employeeTable th,
+.employeeTable td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.employeeTable th {
+  background-color: #004496;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.employeeTable th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.employeeTable th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.employeeTable tr:hover {
+  background-color: #f7fafc;
+  cursor: pointer;
+}
+
+.employeeTable tr.selected {
+  background-color: #ebf4ff;
+}
+
+.employeeDetails {
+  background-color: #f8fafc;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  color: black;
+}
+
+.employeeDetails h2 {
+  color: #1a365d;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.detailsGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.detailItem {
+  display: flex;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.detailLabel {
+  font-weight: 600;
+  color: #1a365d;
+  width: 120px;
+}
+
+.detailValue {
+  color: #4a5568;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .statsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .mainContent {
+    padding: 1rem;
+  }
+
+  .employeeTable th,
+  .employeeTable td {
+    padding: 0.75rem;
+  }
+}

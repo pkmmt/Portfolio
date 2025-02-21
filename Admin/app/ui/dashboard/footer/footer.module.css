@@ -1,0 +1,25 @@
+.container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: transparent;
+    border: dotted 1.5px var(--bg2);
+    height: 50px;
+    padding: 20px;
+    position: sticky;
+    margin-bottom: 0;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Luckiest Guy, cursive;
+    color: var(--text2);
+}
+
+.rights{
+    font-size: 12px;
+    color: var(--text2);
+    font-family:Luckiest Guy, cursive;
+}
